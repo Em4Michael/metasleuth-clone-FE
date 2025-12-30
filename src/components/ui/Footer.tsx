@@ -38,29 +38,30 @@ const Footer = () => {
 
   return (
     <footer className="bg-black border-t border-zinc-800">
-      {/* Newsletter Section */}
-      <div className="bg-gradient-to-b from-stone-900 to-black py-12 border-b border-zinc-800">
-        <div className="max-w-7xl mx-auto px-6">
-          <div className="max-w-3xl">
-            <h3 className="text-white font-semibold text-xl mb-2">
-              Subscribe to our newsletter
-            </h3>
-            <p className="text-gray-400 mb-6">
-              The latest news, articles, and resources, sent to your inbox weekly.
-            </p>
-            <div className="flex gap-3">
-              <input
-                type="email"
-                placeholder="Enter your email"
-                className="flex-1 px-4 py-3 bg-zinc-900 border border-zinc-700 rounded-lg text-white placeholder-gray-500 focus:outline-none focus:border-amber-600 transition-colors"
-              />
-              <Button variant="primary">
-                Subscribe
-              </Button>
-            </div>
-          </div>
-        </div>
-      </div>
+     {/* Newsletter Section */}
+<div className="bg-gradient-to-b from-stone-900 to-black py-12 border-b border-zinc-800">
+  <div className="max-w-7xl mx-auto px-6">
+    <div className="max-w-3xl mx-auto"> {/* ← centered for better mobile feel */}
+      <h3 className="text-white font-semibold text-xl mb-2 text-center md:text-left">
+        Subscribe to our newsletter
+      </h3>
+      <p className="text-gray-400 mb-6 text-center md:text-left">
+        The latest news, articles, and resources, sent to your inbox weekly.
+      </p>
+      <form className="flex flex-col sm:flex-row gap-3 max-w-md mx-auto md:max-w-none">
+        <input
+          type="email"
+          placeholder="Enter your email"
+          className="flex-1 px-4 py-3 bg-zinc-900 border border-zinc-700 rounded-lg text-white placeholder-gray-500 focus:outline-none focus:border-amber-600 transition-colors"
+          required // optional but good for UX
+        />
+        <Button variant="primary" className="w-full sm:w-auto">
+          Subscribe
+        </Button>
+      </form>
+    </div>
+  </div>
+</div>
       
       {/* Main Footer Content */}
       <div className="py-12">
